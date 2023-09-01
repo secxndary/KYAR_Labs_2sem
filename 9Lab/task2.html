@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2nd task</title>
+</head>
+<style type="text/css">
+    #img1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        background-color: #000000;
+    }
+</style>
+
+<body>
+
+    <img src="froggy.jpg" id="img1">
+    <script>
+
+        var curPosX = 0;
+        var curPosY = 0;
+        var interval;
+        var n = 1; // На сколько двигать за раз
+        var width = document.documentElement.clientWidth; // Ширина экрана
+        var height = document.documentElement.clientHeight; // Высота экрана
+        var imgWidth = 200; // Ширина картинки
+        var imgHeight = 200; // Высота картинки
+        var img1 = document.getElementById("img1");
+
+        function move() {
+            img1.style.left = (curPosX += n * 2) + "px";
+            img1.style.top = (curPosY += n) + "px";
+            if ((curPosX == (width - imgWidth)) || (curPosY == (height - imgHeight - 30))) {
+                clearInterval(interval);
+            }
+        }
+        interval = setInterval(move, 1);
+    </script>
+
+
+</body>
+
+</html>

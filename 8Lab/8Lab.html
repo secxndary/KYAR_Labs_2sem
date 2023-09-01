@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>8Lab</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-top: 7%;
+            }
+            #task1 {
+                width: 9%;
+                /* height: 3%; */
+                /* margin: 3%; */
+                font-size: x-large;
+                color: blueviolet;
+                /* margin-right: 20%; */
+                /* border: 2px solid red; */
+            }
+            /* #img1 {padding-top: 10%;} */ 
+            #task4, #task6 {
+                /* padding: 3% 10%; */
+                font-size: x-large;
+                color: blueviolet;
+            }
+            #task6 {
+                padding: 7%;
+            }
+        </style>    
+    </head>
+    <body>
+        <div class="container">
+            <div id="task1">Plain Text</div>
+            <div><img src="cursed1.jpg" width="300px" id="img1"></div>
+            <div id="task4">Открыть фото</div>
+            <div id="task6" ondblclick="func6(this)">Нарисовать рамку</div>    
+        </div>    
+        <script type="text/javascript">
+
+            // ========================== Task 1 ==========================
+            let activeDiv = document.getElementById("task1");
+            activeDiv.onmouseover = function () 
+            {
+                this.style.color = "red";
+            }
+
+            // ========================== Task 2 ==========================
+            activeDiv.onclick = function()
+            {
+                this.style.fontSize = "xx-large";
+            }
+
+            // ========================== Task 3 ==========================
+            let activeImg = document.getElementById("img1");
+            activeImg.onclick = function()
+            {
+                this.src = "cursed2.jpg";
+            }
+
+            // ========================== Task 4 ==========================
+            let bigboy =  document.getElementById("task4");
+            bigboy.onclick = function()
+            {
+                bigboy.innerHTML = "<img src='cursed3.jpg' width = '300px'>";
+            }
+
+            // ========================== Task 5 ==========================
+            activeImg.onmouseover = function()
+            {
+                activeImg.style.width = "450px";
+            }
+            activeImg.onmouseout = function()
+            {
+                activeImg.style.width = "300px";
+            }
+
+            // ========================== Task 6 ==========================
+            function func6(element)
+            {
+                element.style.border = "4px dotted green";
+            }
+        </script>
+        </body>
+</html>

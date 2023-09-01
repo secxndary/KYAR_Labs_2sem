@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML5 Lab1</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        #cont {
+            display: flex;
+            flex-direction: row;
+        }
+
+        video {
+            margin: 3%;
+        }
+
+        audio {
+            margin: 14% 0
+        }
+
+        #coord {
+            margin: 0 3%;
+            font-size: large;
+        }
+
+        input {
+            font-size: 15px;
+        }
+
+        #containerLab,
+        #containerLab2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #draw {
+            margin-top: 3%;
+        }
+
+        #containerLab2 {
+            margin: 10% 1%;
+        }
+
+        #photo {
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Я, Валдайцев Александр Денисович, изучаю <mark>HTML5</mark></h2>
+    </header>
+
+    <div id="containerLab">
+        <div id="1-3">
+            <div id="cont">
+                <audio src="OGBuda.mp3" controls="controls"></audio>
+                <video src="video.mp4" controls="controls" width="400"></video>
+            </div>
+
+            <div id="coord">
+                <p>Для считывания координат нажмите на кнопку</p>
+                <input type="button" value="Координаты" onclick="getCoordinates()">
+            </div>
+        </div>
+        <div id="4th">
+            <canvas id="draw" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- ============================== HTML5 - Lab2 ============================== -->
+
+    <div id="containerLab2">
+        <div id="formCont">
+            <form oninput="o.value =+ a.value + parseInt(b.value)" id="form2">
+                <p>Выберите, что посмотреть:</p>
+                <input list="pr" autofocus id="anime" required>
+                <datalist id="pr">
+                    <option value="Атака Титанов"></option>
+                    <option value="Клинок, рассекающий демонов"></option>
+                    <option value="Евангелион"></option>
+                    <option value="Тетрадь смерти"></option>
+                    <option value="Берсерк"></option>
+                    <option value="Сага о Винланде"></option>
+                </datalist>
+
+                <p>Здесь должен быть keygen, но он больше не поддерживается :(</p>
+                <keygen name="key">
+
+                <input name="a" id="a" type="number" step="any" placeholder="Например, 2" novalidate> +
+                <input name="b" id="b" type="number" step="any"> =
+                <output name="o" for="a b"></output>
+
+                <p>Введите дату и время:</p>
+                <input type="datetime-local" id="date">
+
+                <p>Введите почту:</p>
+                <input type="email" id="mail">
+                <p>Введите номер телефона:</p>
+                <input type="tel" id="tel">
+            </form>
+            <br>
+            <input type="submit" form="form2" id="sub" />
+        </div>
+
+        <div id="photo">
+            <nav>
+                <figure>
+                    <img src='azamat.jpg' width='333' />
+                    <figcaption> Моя прекрасная фотография </figcaption>
+                </figure>
+            </nav>
+        </div>
+    </div>
+
+    <footer id="footer">
+        Валдайцев Александр, 2021, 1 курс, 5 группа
+    </footer>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+        $('#sub').click(function () {
+            let anime = document.forms["form2"].elements["anime"].value;
+            let mail = document.forms["form2"].elements["mail"].value;
+            let tel = document.forms["form2"].elements["tel"].value;
+            $('#footer').html("Валдайцев Александр, 2021, 1 курс, 5 группа, e-mail: " + mail + ", телефон: " + tel);
+        })
+
+
+
+
+        function getCoordinates() {
+            navigator.geolocation.getCurrentPosition(showCoordinates);
+        }
+        function showCoordinates(position) {
+            alert("Широта: " + position.coords.latitude + "\nДолгота: " + position.coords.longitude);
+        }
+
+
+        let canvas = document.getElementById("draw");
+        let x = canvas.getContext("2d");
+        x.beginPath();
+        x.shadowOffsetX = 3;
+        x.shadowOffsetY = 2;
+        x.shadowBlur = 6;
+        x.shadowColor = "black";
+        x.fillStyle = "black";
+
+        x.arc(200, 300, 40, 0, Math.PI * 2);
+        x.fill();
+
+        x.lineTo(360, 300);
+        x.stroke();
+        x.closePath();
+
+
+        x.beginPath();
+        x.arc(400, 300, 40, 0, Math.PI * 2);
+        x.fill();
+
+        x.moveTo(440, 300);
+        x.lineTo(480, 300);
+
+        x.lineTo(480, 160);
+        x.lineTo(285, 160);
+        x.lineTo(220, 210);
+        x.lineTo(130, 210);
+        x.lineTo(130, 300);
+        x.lineTo(160, 300);
+
+
+        x.fillStyle = "yellow";
+        x.fillRect(130, 225, 40, 20);
+
+        //лобовое
+        x.moveTo(220, 210);
+        x.lineTo(280, 210);
+        x.lineTo(280, 163);
+
+        let grad = x.createLinearGradient(200, 0, 600, 0);
+        grad.addColorStop(0.0, 'aqua');
+        grad.addColorStop(1.0, 'skyblue');
+        x.fillStyle = grad;
+
+        x.fillRect(295, 164, 170, 46);
+        x.stroke();
+        x.closePath();
+
+        x.font = '22px Verdana';
+        x.fillStyle = 'darkred';
+        x.fillText("Валдайцев А.Д.", 400, 380);
+
+    </script>
+
+</body>

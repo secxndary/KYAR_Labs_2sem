@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="EN">
+ <head>
+  <title>task3</title>
+  <meta charset="UTF-8">
+    <style type='text/css'>
+        .container {
+            margin: 50px 120px;
+            width: 1450px;
+            height: 700px;
+            background-color: thistle;
+        }
+        .bigball {
+            margin-left: 200px;
+            margin-top: 400px;
+            position: absolute;
+        }
+        .container:hover .bigball {
+            margin-left: 200px;
+            margin-top: 400px;
+            position: absolute;
+            animation: anim 1.4s infinite;
+        }
+        .road {
+            margin-left: 600px;
+            margin-top: 100px;
+        }
+        .car {
+            margin-left: 870px;
+            margin-top: 340px;
+            position: absolute;
+        }
+        .container:hover .car {
+            margin-left: 870px;
+            margin-top: 340px;
+            position: absolute;
+            animation: vzoom 1.7s infinite linear;
+        }
+        @keyframes anim {
+             0% {margin-top: 400px}
+             50% {margin-top: 100px}
+             55% {margin-top: 100px}
+             100% {margin-top: 400px; transform: rotate(360deg)}
+         }
+         @keyframes vzoom {
+             40% {
+                 margin-top: 370px;
+                 margin-left: 760px;
+                 height: 160px;
+                 }
+            100% {
+                height: 230px;
+                margin-top: 430px;
+                margin-left: 840px;
+            }
+         }
+         
+        @keyframes anim1 {
+        0% {margin-left:3px;margin-top:3px;background-color:#7F0055;}
+        30% {margin-left:3px;margin-top:250px;background-color:#7F0055;}
+        60% {margin-left:470px;margin-top:250px;background-color:black;}
+        100% {margin-left:3px;margin-top:3px;background-color:#7F0055;}
+        }
+        #wrap1 {
+            border:2px #000 solid;
+            background-color:#7F0055;
+            height:100px;
+            width:100px;
+            font-size:2em;
+            animation:anim1 6s infinite;
+            position: absolute;
+        }
+    </style>
+ </head>
+ <body>
+     <div class="container">
+        <div id="wrap1"></div>
+        <div><img src="ball.png" height="200" class="bigball"></div>
+        <div><img src="nissan.png" height="60" class="car"></div>
+        <div><img src="road.jpg" height="500" class="road"></div>
+     </div>
+ </body>
+</html>

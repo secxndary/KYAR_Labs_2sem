@@ -1,0 +1,109 @@
+<html>
+<head>
+    <style>
+        .button {
+            padding: 20px;
+            font-size: 18px;
+        }
+        .container1 {
+            display: flex;
+            justify-content: space-around;
+            padding: 16px 0 20px 0;
+        }
+    </style>
+<script type='text/javascript'>
+
+function task1()
+{
+    let a =+ 6 * Math.pow(Math.PI, 2) + 3 * Math.exp(8);
+    let b =+ 2 * Math.cos(4) + Math.cos(12) + 8 * Math.exp(3);   
+    let c =+ 3 * Math.sin(9) + Math.log10(5) + Math.sqrt(3);
+    let d =+ 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+    let Array1 = new Array;
+    Array1[0] = a;
+    Array1[1] = b;
+    Array1[2] = c;
+    Array1[3] = d;
+    alert("Массив: " + Array1);
+    max = Math.max(Array1[0], Array1[1], Array1[2], Array1[3]);
+    min = Math.min( Array1[0], Array1[1], Array1[2], Array1[3]);
+    for (i = 0; i < Array1.length; i++)
+    {
+        if (max == Array1[i])
+        {
+            seqMax = i;
+        }
+        if (min == Array1[i])
+        {
+            seqMin = i;
+        }
+    }
+    alert("Максимальный элемент массива с индексом " + seqMax + ": " + max);
+    alert("Минимальный элемент массива с индексом " + seqMin + ": " + min);
+}
+
+function task2()
+{
+    let Array2 = new Array ('pow', 'pop', 'push', 'shift', 'round', 'floor', 'sline', 'sort');
+    let ArrayMath = new Array();
+    let ArrayArray = new Array();
+    for (i = 0; i <= Array2.length; i++)
+    {
+        if (Array2[i] in Math)
+        {
+            ArrayMath.push(Array2[i]);
+        }
+        else if (Array2[i] in new Array)
+        {
+            ArrayArray.push(Array2[i]);
+        }
+    }
+    ArrayMath.unshift('exp');
+    ArrayArray.push('concat');
+    alert("Исходный массив длиной " + Array2.length + ": " + Array2);
+    alert("Массив с методами Math длиной " + ArrayMath.length + ": " + ArrayMath);
+    alert ("Массив с методами Array длиной " + ArrayArray.length + ": " + ArrayArray);
+}
+
+function task3()
+{
+    fio = "Валдайцев Александр Денисович";
+    document.write ("Длина строки: " + fio.length + "<br>");
+    fioUp = fio.toUpperCase();
+    document.write (fioUp + "<br>");
+    fioLow = fio.toLowerCase();
+    document.write (fioLow + "<br>");
+    document.write (fioUp.concat(fioLow) + "<br>");
+    fioBuff = fio.split(' ');
+    fioShort = fioBuff[0][0] + ". " + fioBuff [1][0] + ". " + fioBuff[2][0] + ".";
+    document.write (fioShort);
+}
+
+function task4()
+{
+    styleTable = "style = 'background: radial-gradient(at bottom left, #933fd0, #c57ff7); margin: 170px 0 0 650px; font-size: 20px;text-align: center;border-collapse: collapse; color: rgb(247, 216, 158); border: 2px solid #4B0082; '";
+    styleTd = "style = 'padding:14px; border: 2px solid #4B0082;'";
+    date = new Date();
+    document.write("<table " + styleTable +">" +
+        "<tr><td " + styleTd + ">Год</td><td " + styleTd + ">" + date.getFullYear() + "</td></tr>" + 
+        "<tr><td " + styleTd + ">Месяц</td><td " + styleTd + ">" + ((date.getMonth()) + 1) + "</td></tr>" +
+        "<tr><td " + styleTd + ">День</td><td " + styleTd + ">" + date.getDate() + "</td></tr>" +
+        "<tr><td " + styleTd + ">Час</td><td " + styleTd + ">" + date.getHours() + "</td></tr>" +
+        "<tr><td " + styleTd + ">Минуты</td><td " + styleTd + ">" + date.getMinutes() + "</td></tr>" +
+        "<tr><td " + styleTd + ">Секунды</td><td " + styleTd + ">" + date.getSeconds() + "</td></tr>" +
+        "</table>");
+}
+
+</script>
+
+</head>
+<body>
+    <div class="container1">
+        <input type='button' value='Задание 1' onclick='task1()' class="button"/>
+        <input type='button' value='Задание 2' onclick='task2()' class="button"/>
+        <input type='button' value='Задание 3' onclick='task3()' class="button"/>
+        <input type='button' value='Задание 4' onclick='task4()' class="button"/>
+    </div>
+
+</body>
+</html>

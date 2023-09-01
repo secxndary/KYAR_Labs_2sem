@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>CERF</title>
+    <style>
+        .container8 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 7%;
+        }
+
+        #task1 {
+            width: 9%;
+            font-size: x-large;
+            color: blueviolet;
+        }
+
+        #task4,
+        #task6 {
+            font-size: x-large;
+            color: blueviolet;
+        }
+
+        #task6 {
+            padding: 7%;
+            border: 0px solid black;
+        }
+
+        .container10 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container9_1 {
+            padding: 25% 5%;
+        }
+
+        .drag {
+            position: relative;
+            z-index: 100;
+            font-size: 20px;
+        }
+
+        #frog {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            padding: 5%;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="container10">
+        <div class="container8">
+            <div id="task1" style="height: 20px;">Plain Text</div>
+            <div><img src="cursed1.jpg" width="300px" id="img1"></div>
+            <div id="task4">Открыть фото</div>
+            <div id="task6">Нарисовать рамку</div>
+        </div>
+
+        <div class="container9_1">
+            <img src="true.png" class="drag" width="250px" id="true">
+            <p class="drag" style="width: 130px;">скобочка)</p>
+        </div>
+
+        <div class="container9_2">
+            <img src="froggy.jpg" id="frog">
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+
+
+        // Task 6
+        // $("task6").dblclick(function () {
+        //     $("#task6").css("border-style", "dotted").css("border-color", "red");
+        // })
+            let piska=`<td>${heu}</td>`;
+            
+        $("task6").click(function () {
+            i = 0;// i должна быть глобальной переменной, замыкание городить нехочется. 
+            $("#task6").animate({ top: function () { i = i + 1; return sin(i) * 100; }, left: "+=1" }, 2000);
+        })
+    });
+</script>
+
+</html>

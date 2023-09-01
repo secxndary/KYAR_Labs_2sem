@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://msiter.ru" xmlns="http://msiter.ru" elementFormDefault="qualified">
+
+    <xs:element name="CONTAINER">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="INFO">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="SPECIALITY" maxOccurs="unbounded">
+            <xs:complexType>
+            <xs:sequence>
+                <xs:element name="UNIVERSITY" type="xs:string" />
+                <xs:element name="GRADE" type="xs:string" />
+                <xs:element name="NUMBER" type="xs:string" />
+                <xs:element name="CITY" type="xs:string" />
+            </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

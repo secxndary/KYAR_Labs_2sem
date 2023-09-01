@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>5 Lab</title>
+   <style>
+      #cont1,
+      #cont2,
+      #cont3 {
+         display: flex;
+         flex-direction: row;
+      }
+
+      body {
+         font-size: large;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- <h3>Студент из основного списка:</h3>
+   <div id="cont1">
+      <div id="name1"></div> &nbsp;
+      <div id="sname1"></div> ,&nbsp;
+      <div id="grade1"></div> &nbsp;баллов
+   </div>
+
+   <h3>Студент из списка учеников и преподавателей:</h3>
+   <div id="cont2">
+      <div id="name2"></div> &nbsp;
+      <div id="sname2"></div> ,&nbsp;
+      <div id="grade2"></div> &nbsp;баллов по дисциплине&nbsp;
+      <div id="disc2"></div>
+   </div>
+
+   <h3>Студент из списка подгрупп:</h3>
+   <div id="cont3">
+      <div id="number3"></div> &nbsp;номер в журнале:&nbsp;
+      <div id="name3"></div> &nbsp;
+      <div id="sname3"></div> &nbsp;
+   </div> -->
+
+
+   <input type="file" onchange="processFiles(this.files)">
+
+
+   <script>
+
+
+      // if (window.DOMParser) // Включаем обработчик XML структуры
+      // {  // Firefox, Chrome, Opera и др.
+      //    parser = new DOMParser();
+      //    xmlDOC = parser.parserFromString(xml, "text/xml");
+      // }
+      // else //Internet Explorer
+      // {
+      //    xmlDOC = new ActiveXObject("Microsoft.XMLDOM");
+      //    xmlDoc.async = false;
+      //    xmlDoc.loadXML(xml);
+      // }
+
+
+      // facultyList = xmlDoc.getElementsByTagName("donut"); //Получаем массив всех факультетов
+      // for (var i = 0; i < facultyList.length; i++) {
+      //    var facultyName = facultyList[i].getElementByTagName("donut_name")[0].innerHTML;
+      //    output.innerHTML += facultyName + "<br/>"; //Выводим название ф-та
+      // }
+
+
+      // function processFiles(files) { // После загрузки файла
+      //    var file = files[0];
+      //    var reader = new FileReader(); // Читаем файл
+      //    reader.onload = function (e) {
+      //       xml = e.target.result; // Записываем в переменную содер-жимое файла// Совершаем действия над строкой xml
+      //    }
+      //    reader.readAsText(file); // Указываем, что данный файл предназначен для чтения текста
+      // }
+
+
+      
+
+
+      // if (window.XMLHttpRequest) { // для IE7+, Firefox, Chrome, Opera, Safari
+      //    xmlhttp = new XMLHttpRequest();
+      // }
+      // else { // для IE6, IE5
+      //    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      // }
+
+
+
+      // xmlhttp.open("GET", "XML5_1.xml", false);
+      // xmlhttp.send();
+      // xmlDoc = xmlhttp.responseXML;
+
+      // document.getElementById("name1").innerHTML = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      // document.getElementById("sname1").innerHTML = xmlDoc.getElementsByTagName("surname")[0].childNodes[0].nodeValue;
+      // document.getElementById("grade1").innerHTML = xmlDoc.getElementsByTagName("grade")[0].childNodes[0].nodeValue;
+
+
+
+      // xmlhttp.open("GET", "XML5_2.xml", false);
+      // xmlhttp.send();
+      // xmlDoc = xmlhttp.responseXML;
+
+      // document.getElementById("name2").innerHTML = xmlDoc.getElementsByTagName("name")[3].childNodes[0].nodeValue;
+      // document.getElementById("sname2").innerHTML = xmlDoc.getElementsByTagName("surname")[3].childNodes[0].nodeValue;
+      // document.getElementById("grade2").innerHTML = xmlDoc.getElementsByTagName("grade")[0].childNodes[0].nodeValue;
+      // document.getElementById("disc2").innerHTML = xmlDoc.getElementsByTagName("discipline")[3].childNodes[0].nodeValue;
+
+
+
+      // xmlhttp.open("GET", "XML5_3.xml", false);
+      // xmlhttp.send();
+      // xmlDoc = xmlhttp.responseXML;
+
+      // document.getElementById("name3").innerHTML = xmlDoc.getElementsByTagName("name")[1].childNodes[0].nodeValue;
+      // document.getElementById("sname3").innerHTML = xmlDoc.getElementsByTagName("surname")[1].childNodes[0].nodeValue;
+      // document.getElementById("number3").innerHTML = xmlDoc.getElementsByTagName("number")[1].childNodes[0].nodeValue;
+
+   </script>
+</body>
+
+</html>

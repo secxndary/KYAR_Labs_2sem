@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>task4</title>
+  <meta charset="UTF-8">
+  <style>
+      @media screen and (min-width: 600px)
+      {
+        .header, .end {
+          text-align: center;
+          height: 28px;
+          background-color: cornflowerblue;
+          padding: 8px;
+          color: darkblue;
+          font-size: 24px;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          align-content: flex-start;
+        }
+        .workplate {
+         display: flex;
+        }
+        .menu {
+          background-color: cornsilk;
+          padding: 0 2% 0 0;
+        }
+        img {
+            width: 40%;
+            margin: 0 2% 2% 2%}
+        }
+        .vid {margin: 10%; font-weight: 600;}
+        p {margin: 2%;}
+      @media screen and (max-width: 600px)
+      {
+          .header, .end {display: none;}
+          img {width: 100%;
+          margin: 0 0 2% 0;}
+          .workplate {
+              display: flex;
+              flex-direction: column-reverse;
+          }
+          li {
+              display: inline;
+              margin: 2%;
+          }
+          .vid {
+              font-weight: 600;
+              margin: 0 5% 0 2%;
+          }
+          .menu {
+              display: flex;
+              flex-direction: column;
+          }
+          ul {padding: 0 2% 0 0;}
+      }
+  </style>
+ </head>
+ <body>
+     <div class="container">
+        <div class="header">
+            ПРИВЕТ УЧАСТНИКАМ СОРЕВНОВАНИЙ!
+        </div>
+        <div class="workplate">
+            <div class="menu">
+                <p class="vid">Виды спорта:</p>
+                <ul>
+                    <li><a href="https://memestatic.fjcdn.com/pictures/Britbeans_e193bd_6241423.jpg">конькобежный спорт</a</li>
+                    <li><a href="https://i.ytimg.com/vi/uXXIHXPkZ50/maxresdefault.jpg">биатлон</a></li>
+                    <li><a href="https://memestatic.fjcdn.com/pictures/I+heard+you+like+beans_d55a45_7246089.jpg">футбол</a></li>
+                    <li><a href="https://memestatic.fjcdn.com/pictures/I+heard+you+like+beans_65cb6c_7246089.jpg">стрельба из лука</a></li>
+                    <li><a href="https://i.pinimg.com/originals/ca/b9/21/cab921fbcf2e6cd54c12f10ec2f7ef79.jpg">прыжки в длину</a></li>
+                    <li><a href="https://pbs.twimg.com/media/C5Qu8FUXAAAKGWB.jpg">прыжки в высоту</a></li>
+                    <li><a href="https://pbs.twimg.com/media/DzARtrQUcAAkIAQ.jpg">фигурное катание</a></li>
+                </ul>
+            </div>
+            <div class="loremipsum">
+                <h3 style="text-align: center;">ФУТБОЛ</h3>
+                <img src="sport.jpg" align="left">
+                <p>
+                    Футбол — коммандный вид спорта, в котором целью является забить мяч в 
+                    ворота соперника ногами или другими частями тела (кроме рук) большее
+                    количество раз, чем команда соперника.
+                </p>
+                <p>
+                    Есть 17 официальных правил игры, каждое из которых содержит список 
+                    оговорок и руководящих принципов.
+                </p>
+            </div>
+        </div>
+        <div class="end">
+            ГЛАВНОЕ НЕ ПОБЕДА, А УЧАСТИЕ!
+        </div>
+     </div>
+ </body>

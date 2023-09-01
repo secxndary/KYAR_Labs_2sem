@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>6Lab</title>
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-around;
+                padding: 16px 0 20px 0;
+            }
+            .button {
+            padding: 20px;
+            font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type='button' value='Открыть окно' onclick='open1()' class="button"/>
+            <input type='button' value='Закрыть окно' onclick='close1()' class="button"/>
+            <input type='button' value='Имя окна' onclick='alert1()' class="button"/>
+            <input type='button' value='Таблица' onclick='tableCout()' class="button"/>
+        </div>
+        <div>
+
+        </div>
+        <script>
+            let activeWindow;
+            function open1()
+            {
+                activeWindow = window.open();
+                activeWindow.document.title = "Открыто новое окно";
+            }
+            function close1()
+            {
+                activeWindow.close();
+            }
+            function alert1()
+            {
+                activeWindow.document.write("Имя открытого окна:\n" + activeWindow.document.title);
+            }
+            function tableCout()
+            {
+                styleTable = " style = 'background: radial-gradient(at bottom left, #933fd0, #c57ff7); margin: 30px 0 0 80px; font-size: 20px;text-align: center;border-collapse: collapse; color: rgb(247, 216, 158); border: 2px solid #4B0082; '";
+                styleTd = " style = 'padding:14px; border: 2px solid #4B0082;'";
+                document.write ("<table" + styleTable + ">"+
+                "<th " + styleTd + ">Свойство</th><th " + styleTd + ">Значение</th>"+
+                "<tr><td " + styleTd + ">navigator.userAgent</td><td " + styleTd + ">" + navigator.userAgent + "</td></tr>"+
+                "<tr><td " + styleTd + ">navigator.appVersion</td><td " + styleTd + ">" + navigator.appVersion + "</td></tr>"+
+                "<tr><td " + styleTd + ">navigator.appName</td><td " + styleTd + ">" + navigator.appName + "</td></tr>"+
+                "<tr><td " + styleTd + ">navigator.appCodeName</td><td " + styleTd + ">" + navigator.appCodeName + "</td></tr>"+
+                "<tr><td " + styleTd + ">navigator.platform</td><td " + styleTd + ">" + navigator.platform + "</td></tr>"+
+                "<tr><td " + styleTd + ">navigator.JavaEnabled()</td><td " + styleTd + ">" + navigator.javaEnabled() + "</td></tr>"+
+                "<tr><td " + styleTd + ">screen.width; screen.height</td><td " + styleTd + ">" + screen.width + "*" + screen.height + "</td></tr>"+
+                "<tr><td " + styleTd + ">screen.colorDepth</td><td " + styleTd + ">" + screen.colorDepth + "</td></tr>"+
+                "<tr><td " + styleTd + ">history.length</td><td " + styleTd + ">" + history.length + "</td></tr>"+
+                "<tr><td " + styleTd + ">location.href</td><td " + styleTd + ">" + location.href + "</td></tr>"+
+                "<tr><td " + styleTd + ">location.pathname</td><td " + styleTd + ">" + location.pathname + "</td></tr>"+
+                "<tr><td " + styleTd + ">location.host</td><td " + styleTd + ">" + location.host + "</td></tr>"+
+                "</table>");
+            }
+        </script>
+    </body>
+</html>

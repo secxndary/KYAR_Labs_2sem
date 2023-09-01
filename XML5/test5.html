@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>5 Lab</title>
+</head>
+
+<body>
+    <input type="file" onchange="processFiles(this.files)">
+</body>
+
+<script>
+    function processFiles(files) {
+
+        let file = files[0];
+        let reader = new FileReader();
+
+        reader.onload = function (e) {
+            let xml = e.target.result;
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(xml, "text/xml");
+            
+            let sequence =+ prompt("Выберите номер от 1 до 5:");
+            let studentName = xmlDoc.getElementsByTagName("name")[sequence - 1].childNodes[0].nodeValue;
+
+            document.write(studentName);
+        }
+
+        reader.readAsText(file);
+    }
+</script>
+
+</html>

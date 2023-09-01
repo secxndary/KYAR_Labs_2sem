@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4th task</title>
+    <style type="text/css">
+        #canvas {
+            background: url("axis.jpg");
+            border: 2px solid black;
+        }
+
+        input,
+        select {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        form {
+            margin: 5% 0 0 2%;
+        }
+
+        canvas {
+            margin: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas" width="700" height="500"></canvas>
+        <form>
+            <input type="radio" value="1" name="func" /> y = x<sup>2</sup>
+            <input type="radio" value="2" name="func" /> y = x<sup>3</sup>
+            <input type="radio" value="3" name="func" /> y = sin(x)
+            <input type="radio" value="4" name="func" /> y = cos(x)
+
+            <select name="colour">
+                <option value="violet">Фиолетовый</option>
+                <option value="red">Красный</option>
+                <option value="blue">Синий</option>
+                <option value="yellow">Жёлтый</option>
+                <option value="black">Чёрный</option>
+            </select>
+
+            <input type="button" value="Напечатать" onclick="draw()">
+            <input type="button" value="Удалить" onclick="clearing()">
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        const canvasPlot = document.getElementById("canvas");
+        const ctx = canvasPlot.getContext('2d');
+
+        const canvasW = canvasPlot.clientWidth;
+        const canvasH = canvasPlot.clientHeight;
+
+        const scaleX = 30;
+        const scaleY = 30;
+
+        const xAxis = canvasW / 2;
+        const yAxis = canvasH / 2;
+
+        function draw() {
+            var functions = document.getElementsByName("func"); //массив функций
+            var curr_func;
+            for (let i = 0; i < functions.length; i++) {
+                if (functions[i].checked) curr_func = functions[i]; //curr_func - выбранная функция
+            }
+
+            var choice = Number(curr_func.value); //number(value)
+
+            switch (choice) {
+                case 1: drawx2(); break;
+                case 2: drawx3(); break;
+                case 3: drawSin(); break;
+                case 4: drawCos(); break;
+            }
+
+        }
+
+        function drawx2() {
+            var curr_colour = document.forms[0].colour.value;
+            ctx.fillStyle = curr_colour;
+            for (let i = 0; i <= canvasW; i++) {
+                const x = (i - xAxis) / scaleX;
+                const y = Math.pow(x, 2);
+                ctx.fillRect(x * scaleX + xAxis, yAxis - scaleY * y, 2, 2);
+            }
+        }
+
+        function drawx3() {
+            var curr_colour = document.forms[0].colour.value;
+            ctx.fillStyle = curr_colour;
+            for (let i = 0; i <= canvasW; i++) {
+                const x = (i - xAxis) / scaleX;
+                const y = Math.pow(x, 3);
+                ctx.fillRect(x * scaleX + xAxis, yAxis - scaleY * y, 2, 2);
+            }
+        }
+
+        function drawSin() {
+            var curr_colour = document.forms[0].colour.value;
+            ctx.fillStyle = curr_colour;
+            for (let i = 0; i <= canvasW; i++) {
+                const x = (i - xAxis) / scaleX;
+                const y = Math.sin(x);
+                ctx.fillRect(x * scaleX + xAxis, yAxis - scaleY * y, 2, 2);
+            }
+        }
+
+        function drawCos() {
+            var curr_colour = document.forms[0].colour.value;
+            ctx.fillStyle = curr_colour;
+            for (let i = 0; i <= canvasW; i++) {
+                const x = (i - xAxis) / scaleX;
+                const y = Math.cos(x);
+                ctx.fillRect(x * scaleX + xAxis, yAxis - scaleY * y, 2, 2);
+            }
+        }
+
+        function clearing() {
+            ctx.clearRect(0, 0, 700, 500);
+        }
+    </script>
+</body>
+
+</html>

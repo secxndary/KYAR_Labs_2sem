@@ -1,0 +1,117 @@
+<html>
+<head>
+<script type='text/javascript'>
+
+function task1()
+{
+    alert('Вас приветствует учебный центр');
+    name = prompt('Введите имя:');
+    alert('Добро пожаловать на наши курсы, ' + name);
+    choose = confirm ('Хотите стать Web-дизайнером?');
+    if (choose == true)
+        alert('Учите стили CSS и JavaScript!');
+    else alert('Упускаете время!');
+}
+
+function task2()
+{
+    document.write('10+5=', 10+5);
+    document.write('<br><br>"10"+"5"=', "10"+"5");
+    document.write('<br><br>22+"5"=', 22+"5");
+    document.write('<br><br>"22"+5=', "22"+5);
+    alert('Результатом сложения строки и числа всегда будет строка.');
+}
+
+function task3()
+{
+    let x = 12, y = 3;
+    let state1 = (35*y - 25*x)/5 + 232;
+    alert ('state1 = ' + state1);
+    let state2 = 8*y/x + 5/y*3;
+    alert ('state2 = ' + state2);
+    let mod = state1 % state2;
+    alert ('state1 % state2 = ' + mod);
+    document.write('state1 % state2 = ', mod);
+}
+
+function task4()
+{
+    let number = prompt('Введите число:');
+    if ((number < 20 || number > 40) && number != 15 && number%5 == 0)
+    alert('Правильное значение');
+    else alert ('Неправильное значение');
+    // свой пример
+    let MyNum = prompt('Введите число:');
+    if ((MyNum > 50 && MyNum <= 250 && MyNum != 100) || (MyNum < 40 && MyNum % 10 == 0))
+    alert('Правильное значение');
+    else alert ('Неправильное значение');
+}
+
+function task5()
+{
+    let a = prompt('Введите число а:');
+    let b = prompt('Введите число b:');
+    if (a > b) document.write('А больше В');
+    else if (a < b) document.write ('A меньше В');
+    else if (a == b) document.write ('А равно В');
+    // свой пример
+    let z =  prompt('Введите число z:');
+    let x =  prompt('Введите число x:');
+    let c = (z > x) ? document.write('<br>Z больше X') : document.write ('<br>Z меньше X');
+}
+
+function task6()
+{
+    let weekd = prompt ('Введите порядковый номер дня недели:');
+    switch (weekd)
+    {
+        case "1": alert ('Понедельник'); break;
+        case "2": alert ('Вторник'); break;
+        case "3": alert ('Среда'); break;
+        case "4": alert ('Четверг'); break;
+        case "5": alert ('Пятница'); break;
+        case "6": alert ('Суббота'); break;
+        case "7": alert ('Воскресенье'); break;
+        default: alert ('Введите корректный день недели'); break;
+    }
+}
+
+function task7()
+{
+    try 
+    {
+        let check1 = prompt('Введите число:');
+        err; // переменная не инициализирована
+    }
+    catch (errorCatch)
+    {
+        alert("Ошибка " + errorCatch.name + ": " + errorCatch.message + "\n" + errorCatch.stack);
+    }
+    let check2 = prompt('Введите второе число:');
+}
+
+</script>
+<style>
+    .button {
+        padding: 20px;
+        font-size: 18px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 16px 0 0 0;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <input type='button' value='Задание 1' onclick='task1()' class="button"/>
+        <input type='button' value='Задание 2' onclick='task2()' class="button"/>
+        <input type='button' value='Задание 3' onclick='task3()' class="button"/>
+        <input type='button' value='Задание 4' onclick='task4()' class="button"/>
+        <input type='button' value='Задание 5' onclick='task5()' class="button"/>
+        <input type='button' value='Задание 6' onclick='task6()' class="button"/>
+        <input type='button' value='Задание 7' onclick='task7()' class="button"/>
+    </div>
+</body>
+</html>

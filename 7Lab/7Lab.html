@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>7Lab</title>
+        <style>
+            textarea, textfield {
+                font-weight: 300;
+            }  
+        </style>
+    </head>
+    <body>
+        <div style = "color: bisque;">
+        <form name="data">
+            <fieldset style="width: 40%; background: radial-gradient(at top left, #560979, #00ceff); border: none; padding: 2%">
+                <textarea rows="3">Факультет Информационных Технологий</textarea>
+                <br><br><input type="text" name="lName" placeholder="Фамилия"/>
+                <br><input type="text" name="fName" placeholder="Имя"/>
+                <br><br><textfield>Специальность</textfield>
+                <select id="speciality">
+                    <option value="ПОИТ">ПОИТ</option>
+                    <option value="ИСиТ">ИСиТ</option>
+                    <option value="ДЭиВИ">ДЭиВИ</option>
+                    <option value="ПОиБМС">ПОиБМС</option>
+                </select>
+                <br><br><textfield>Курс</textfield>
+                <input type="radio" name="kurs" value="1">1
+                <input type="radio" name="kurs" value="2">2
+                <input type="radio" name="kurs" value="3">3
+                <input type="radio" name="kurs" value="4">4
+                <br><textfield>Предметы</textfield>
+                <br><input type="checkbox" name="check" value="ОИТ" id="oit"/>ОИТ
+                <input type="checkbox" name="check" value="ОАП" id="oap"/>ОАП
+                <input type="checkbox" name="check" value="История" id="history"/>История
+                <input type="checkbox" name="check" value="Физика" id="physics"/>Физика
+                <input type="checkbox" name="check" value="Математика" id="maths"/>Математика
+                <br><br><input type="submit"/>
+                <input type="reset"/>
+                <br><br><input type="button" value="Напечатать" onclick="func3()"/>
+                <input type="button" value="4 задание" onclick="func4()"/>
+            </fieldset>
+        </form>
+        </div>
+
+        <div>
+            <form name="form2" style="padding: 0 2px;">
+                <select id="predmety">
+                    <option id="oit2"></option>
+                    <option id="oap2"></option>
+                    <option id="history2"></option>
+                    <option id="physics2"></option>
+                    <option id="maths2"></option>
+                </select>
+            </form>
+        </div>
+        <script type="text/javascript">
+
+            let oit, oap, history, physics, maths;
+            oit = document.getElementById("oit");
+            oap = document.getElementById("oap");
+            history = document.getElementById("history");
+            physics = document.getElementById("physics");
+            maths = document.getElementById("maths");
+
+            let oit2, oap2, history2, physics2, maths2;
+            oit2 = document.getElementById("oit2");
+            oap2 = document.getElementById("oap2");
+            history2 = document.getElementById("history2");
+            physics2 = document.getElementById("physics2");
+            maths2 = document.getElementById("maths2");
+
+            function func3()
+            {
+                document.write("<h1 align = 'center'> "+ document.forms[0].elements[1].value + "</h1><br><pre><div style = 'font-size: 20px'>Студент " + 
+                document.forms[0].elements[2].value + " специальность " + document.getElementById("speciality").value + " курс " + 
+                document.forms[0].kurs.value + " должен сдавать следующие предметы:<br>");
+                if (oit.checked) {document.write("<li>" + oit.value + "</li>")};
+                if (oap.checked) {document.write("<li>" + oap.value + "</li>")};
+                if (history.checked) {document.write("<li>" + history.value + "</li>")};
+                if (physics.checked) {document.write("<li>" + physics.value + "</li>")};
+                if (maths.checked) {document.write("<li>" + maths.value + "</li>")};
+                document.write("</div>");
+            }
+
+            function func4()
+            {
+                if (oit.checked)
+                {
+                    oit.value;
+                    oitBuf = document.createTextNode(oit.value);    
+                    oit2.appendChild(oitBuf);        
+                }
+                if (oap.checked)
+                {
+                    oap.value;
+                    oapBuf = document.createTextNode(oap.value);    
+                    oap2.appendChild(oapBuf);        
+                }
+                if (history.checked)
+                {
+                    history.value;
+                    historyBuf = document.createTextNode(history.value);    
+                    history2.appendChild(historyBuf);        
+                }
+                if (physics.checked)
+                {
+                    physics.value;
+                    physicsBuf = document.createTextNode(physics.value);    
+                    physics2.appendChild(physicsBuf);        
+                }
+                if (maths.checked)
+                {
+                    maths.value;
+                    mathsBuf = document.createTextNode(maths.value);    
+                    maths2.appendChild(mathsBuf);        
+                }
+            }
+        </script>
+    </body>
+</html>

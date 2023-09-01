@@ -1,0 +1,46 @@
+<?xmlversion = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type = "text/css" href = "XMLstyle.css"?>
+<?xml-stylesheet type="text/xsl" href="sort4.xsl"?>
+
+<donut>
+    <pupil>
+        <surname>Валдайцев</surname>
+        <name>Александр</name>
+        <thname>Денисович</thname>
+        <grade>9</grade>
+        <year>2002</year>
+    </pupil>    
+
+    <pupil>
+        <surname>Врублевский</surname>
+        <name>Никита</name>
+        <thname>Андреевич</thname>
+        <grade>3</grade>
+        <year>2001</year>
+    </pupil>    
+    
+    <pupil>
+        <surname>Димитриади</surname>
+        <name>Антон</name>
+        <thname>Владимирович</thname>
+        <grade>10</grade>
+        <year>2002</year>
+    </pupil>    
+    
+    <pupil>
+        <surname>Титова</surname>
+        <name>Анастасия</name>
+        <thname>Леонидовна</thname>
+        <grade>6</grade>
+        <year>2004</year>
+    </pupil>    
+    
+    <pupil>
+        <surname>Николаева</surname>
+        <name>Евгения</name>
+        <thname>Александровна</thname>
+        <grade>9</grade>
+        <year>2003</year>
+    </pupil>    
+    
+</donut>

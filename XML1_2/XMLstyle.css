@@ -1,0 +1,44 @@
+SPECIALITY {
+    display: block;
+    text-align: center;
+    margin: 10px 20px 10px 20px;
+    margin-top: 12pt;
+    border-style: solid;
+    border-color: #8C0088;
+    font-size: 15pt;
+    background: radial-gradient(at bottom left, #933fd0, #c57ff7);
+    color: rgb(255, 253, 208);
+}
+
+UNIVERSITY {
+    font-style: italic;
+    text-align: center
+}
+
+GRADE {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: #8C0088
+}
+
+NUMBER {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: #8C0088
+}
+
+CITY {
+    display: block;
+    text-align: center;
+    border-top: solid;
+    border-color: #8C0088
+}
+
+INFO {
+    display: block;
+    margin: 50px 450px;
+    border: 3px solid purple;
+    background-color: rgb(249, 255, 231);
+}

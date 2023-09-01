@@ -1,0 +1,39 @@
+<?xmlversion = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XML3_XSL.xsl"?>
+
+<INFO>
+    <SPECIALITY>
+        <UNIVERSITY>ГрГУ</UNIVERSITY>
+        <GRADE>308</GRADE>
+        <NUMBER>75 человек</NUMBER>
+        <CITY>Гродно</CITY>
+    </SPECIALITY>
+
+    <SPECIALITY>
+        <UNIVERSITY>БГУ</UNIVERSITY>
+        <GRADE>321</GRADE>
+        <NUMBER>70 человек</NUMBER>
+        <CITY>Минск</CITY>
+    </SPECIALITY>
+
+    <SPECIALITY>
+        <UNIVERSITY>БГУИР</UNIVERSITY>
+        <GRADE>335</GRADE>
+        <NUMBER>65 человек</NUMBER>
+        <CITY>Минск</CITY>
+    </SPECIALITY>
+
+    <SPECIALITY>
+        <UNIVERSITY>БНТУ</UNIVERSITY>
+        <GRADE>314</GRADE>
+        <NUMBER>80 человек</NUMBER>
+        <CITY>Минск</CITY>
+    </SPECIALITY>
+
+    <SPECIALITY>
+        <UNIVERSITY>БрГУ</UNIVERSITY>
+        <GRADE>315</GRADE>
+        <NUMBER>75 человек</NUMBER>
+        <CITY>Брест</CITY>
+    </SPECIALITY>
+</INFO>

@@ -1,0 +1,43 @@
+<?xmlversion = "1.0" encoding = "UTF-8"?>
+
+<group5>
+    <subgroup1>
+        <person>
+            <number>9</number>
+            <surname>Титова</surname>
+            <name>Анастасия</name>
+        </person>
+
+        <person>
+            <number>3</number>
+            <surname>Буранко</surname>
+            <name>Валерия</name>
+        </person>
+
+        <person>
+            <number>15</number>
+            <surname>Шарилов</surname>
+            <name>Павел</name>
+        </person>
+    </subgroup1>
+
+    <subgroup2>
+        <person>
+            <number>7</number>
+            <surname>Димитриади</surname>
+            <name>Антон</name>
+        </person>
+        
+        <person>
+            <number>9</number>
+            <surname>Круглик</surname>
+            <name>Алексей</name>
+        </person>
+
+        <person>
+            <number>2</number>
+            <surname>Буданова</surname>
+            <name>Ксения</name>
+        </person>
+    </subgroup2>
+</group5>

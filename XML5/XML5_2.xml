@@ -1,0 +1,35 @@
+<?xmlversion = "1.0" encoding = "UTF-8"?>
+
+<people>
+    <teacher>
+        <surname>Нистюк</surname>
+        <name>Ольга</name>
+        <discipline>КЯР</discipline>
+    </teacher>    
+
+    <teacher>
+        <surname>Кантарович</surname>
+        <name>Вероника</name>
+        <discipline>КЯР</discipline>
+    </teacher>    
+    
+    <teacher>
+        <surname>Мущук</surname>
+        <name>Артур</name>
+        <discipline>ЯП</discipline>
+    </teacher>    
+    
+    <pupil>
+        <surname>Титова</surname>
+        <name>Анастасия</name>
+        <grade>8</grade>
+        <discipline>КЯР</discipline>
+    </pupil>    
+    
+    <pupil>
+        <surname>Николаева</surname>
+        <name>Евгения</name>
+        <grade>9</grade>
+        <discipline>ЯП</discipline>
+    </pupil>       
+</people>
